@@ -4,7 +4,7 @@
 
 Assoluto Fatalita Dash, based upon the Assoluto Fatalita from Ridge Racer 7.
 
-#Design Notes
+# Design Notes
 
 The tach is a pain to make :)
 
