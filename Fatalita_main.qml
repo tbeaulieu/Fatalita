@@ -102,7 +102,7 @@ Item{
     property int fuelunits:1
     property int oiltemplow:0
     property int oiltemphigh:0
-Item {
+    property int oiltempunits:0
     property int oilpressurelow:0
     property int oilpressurehigh:0
     property int oilpressureunits:0

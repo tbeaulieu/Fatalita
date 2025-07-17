@@ -1,6 +1,5 @@
 import QtQuick 2.3
 import QtGraphicalEffects 1.0
-import QtQuick.Shapes 1.0
 
 import "fatalita"
                                                                                                                                 
@@ -243,7 +242,7 @@ Item {
     }
     Image{
         x:34;y:16;z:2
-        source: "./fatalita/tach/"+(root.sidelight?"yellow":"white")+"/"+roundToNearest250(root.rpm);
+        source: "./fatalita/tach/"+(root.sidelight?"yellow":"white")+"/"+roundToNearest250(root.rpm)+".png";
     }
     Image{
         x:0;y:289;z:1
@@ -587,7 +586,12 @@ Item {
             color: root.digital_green
             z:4
             x:80;y:80
-            text: root.speedunits === 0 ? root.odometer.toFixed(0) : (root.odometer * 0.621371).toFixed(0)
+            text: if (root.speedunits === 0)
+                        (root.odometer/.62).toFixed(0) 
+                    else if(root.speedunits === 1)
+                        root.odometer 
+                    else
+                        root.odometer
             width: 86
             horizontalAlignment: Text.AlignRight
         }
